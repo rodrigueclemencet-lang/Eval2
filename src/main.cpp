@@ -1,13 +1,15 @@
 #include <iostream> 
 using namespace std;
+int main() {
 unsigned char choixUtilisateur;
 bool choixValide = false;
 
 
-int main() {  
+
   //variable permettant de compter le nombre de places disponibles  
   int nbrePlaces = 10;  
   //variable permettant de récupérer le choix de l’utilisateur  
+  do {
   cout << "************ Evaluation 2 ************" << endl << endl;
   cout << "1 - Entrée dans le parking" << endl << endl;
   cout << "2 - Nombre de places disponibles" << endl << endl;
@@ -34,8 +36,8 @@ int main() {
       choixValide = true;
     } else {
       std::cout << "Choix invalide\n\n";
-    }
-  
+    }} while ((choixUtilisateur != '0') && (choixUtilisateur != '4'));
+
 
 
 
