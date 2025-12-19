@@ -23,16 +23,22 @@ bool choixValide = false;
     std::cout << "vous avez choisi " << choixUtilisateur << std::endl;
 
     if (choixUtilisateur == '1') {
-      std::cout << "Entrée dans le parking\n";
-      --nbrePlaces;
+      if (nbrePlaces > 0){
+        --nbrePlaces;
+         std::cout << "Entrée dans le parking\n";}
+        else {
+          std::cout << "Parking remplie\n";}
       choixValide = true;
     } else if (choixUtilisateur == '2') {
       std::cout << "Nombre de places dans le parking\n";
       std::cout << nbrePlaces << endl;
       choixValide = true;
     } else if (choixUtilisateur == '3') {
-      std::cout << "Sortie de Parking\n";
-      ++nbrePlaces;
+      if (nbrePlaces < 10){
+        ++nbrePlaces;
+         std::cout << "Sortie du Parking\n";}
+        else {
+          std::cout << "Parking déja vide\n";}
       choixValide = true;
     } else if (choixUtilisateur == '4') {
       std::cout << "Quitter\n";
